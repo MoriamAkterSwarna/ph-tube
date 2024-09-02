@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* applying-font */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+    
+    <!-- Favicon --> 
+    <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon">
+
+    <!-- daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    red3d: '#FF1F3D',
+                    dark17: '#171717',
+                    dark25: '#252525',
+                    gray3770: 'rgba(37, 37, 37, 0.70)',
+                    gray2370: 'rgba(23, 23, 23, 0.70)',
+                },
+                backgroundColor: {
+                    gray2320: 'rgba(23, 23, 23, 0.20)',
+                    gray3715: 'rgba(37, 37, 37, 0.15)',
+                    gray3720: 'rgba(37, 37, 37, 0.20)'
+                }
+            }
+        }
+    }
+    </script>
+    
+</head>
+
+<body class="container mx-auto px-4">
+    <header class="mt-10 mb-5">
+        <h1 class="text-4xl md:text-7xl font-thin text-red3d">Blog Questions with Answer</h1>
+    </header>
+
+    <hr class="bg-gray2320">
+
+    <main class="flex flex-col gap-5 justify-center items-center mt-5 text-justify">
+        <article class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" checked="checked" /> 
+            <div class="collapse-title text-xl font-medium text-dark25">
+                ## Discuss the scope of <span class="text-red3d font-blod">var</span>, <span class="text-red3d font-blod">let</span>, and <span class="text-red3d font-blod">const</span>
+              </div>
+              <div class="collapse-content"> 
+                <p class="text-gray3720"># <span class="text-red3d font-blod">var</span> is function scoped. A variable decleared with <span class="text-red3d font-blod">var</span> keyword can be access from anywhere inside a function.</p>
+                <br>
+                <p class="text-gray3720"># <span class="text-red3d font-blod">let</span> is block scoped. A variable decleared with <span class="text-red3d font-blod">let</span> keyword can be access only from the block from which it is decleared. A variable decleared with <span class="text-red3d font-blod">let</span> keyword can be reassigned with new values.</p>
+                <br>
+                <p class="text-gray3720"># <span class="text-red3d font-blod">const</span> is block scoped. A variable decleared with <span class="text-red3d font-blod">const</span> keyword can be access only from the block from which it is decleared. It is different from <span class="text-red3d font-blod">let</span> because a variable decleared with <span class="text-red3d font-blod">const</span> keyword can not be reassigned with new values.</p>
+              </div>
+          </article>
+          <article class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" /> 
+            <div class="collapse-title text-xl font-medium text-dark25">
+                ## Tell us the use cases of <span class="text-red3d font-blod">null</span> and <span class="text-red3d font-blod"><span class="text-red3d font-blod">undefined</span></span>
+              </div>
+              <div class="collapse-content"> 
+                <p class="text-gray3720"># Both <span class="text-red3d font-blod">null</span> and <span class="text-red3d font-blod"><span class="text-red3d font-blod">undefined</span></span> means no value or empty value. But they are different in a very specific way. <br>
+                # <span class="text-red3d font-blod">null</span> is explicit where as undefiend is implecit. Means by using <span class="text-red3d font-blod">null</span> programmers can explicitly define that a variable has no value. <br>
+                # One the other hand <span class="text-red3d font-blod">undefined</span> means the value of a variable is currently not defined but in future the value may get defined.</p>
+              </div>
+          </article>
+          <article class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" /> 
+            <div class="collapse-title text-xl font-medium text-dark25">
+                ## What do you mean by <span class="text-red3d font-blod">REST</span> <span class="text-red3d font-blod">API</span>?
+            </div>
+            <div class="collapse-content"> 
+              <p class="text-gray3720"># <span class="text-red3d font-blod">REST</span> means <span class="text-red3d font-blod">"Representational State Transfer"</span>. Nowadays, everyone is using <span class="text-red3d font-blod">REST</span> <span class="text-red3d font-blod">API</span> for exchanging information securely over the internet between two computers. A <span class="text-red3d font-blod">REST</span> <span class="text-red3d font-blod">API</span> basically performs <span class="text-red3d font-blod"> FOUR </span> <span class="text-red3d font-blod"> operations </span> on any data, which <span class="text-red3d font-blod">"Create"</span>, <span class="text-red3d font-blod">"Read"</span>, <span class="text-red3d font-blod">"Update"</span>, <span class="text-red3d font-blod">"Delete"</span>. In short this <span class="text-red3d font-blod"> operations </span> are called <span class="text-red3d font-blod"> CRUD </span> <span class="text-red3d font-blod"> operations </span>.
+                <span class="text-red3d font-blod">REST</span> <span class="text-red3d font-blod">API</span> uses mainly <span class="text-red3d font-blod"> FIVE </span> <span class="text-red3d font-blod">HTTP</span> <span class="text-red3d font-blod">Methods</span>. The <span class="text-red3d font-blod">HTTP</span> <span class="text-red3d font-blod">Methods</span> are: </p>
+                <ul>
+                    <li class="text-gray3720 list-disc list-inside"><span class="text-red3d font-blod">GET</span>: The <span class="text-red3d font-blod">HTTP</span> <span class="text-red3d font-blod">GET</span> <span class="text-red3d font-blod">Method</span> is used to <span class="text-red3d font-blod">"Read"</span> a data from <span class="text-red3d font-blod">API</span>.</li>
+                    <li class="text-gray3720 list-disc list-inside"><span class="text-red3d font-blod">POST</span>: The <span class="text-red3d font-blod">HTTP</span> <span class="text-red3d font-blod">POST</span> <span class="text-red3d font-blod">Method</span> is used to <span class="text-red3d font-blod"><span class="text-red3d font-blod">"Create"</span></span> a data using <span class="text-red3d font-blod">API</span>.</li>
+                    <li class="text-gray3720 list-disc list-inside"><span class="text-red3d font-blod">PUT|PATCH</span>: The <span class="text-red3d font-blod">HTTP</span> <span class="text-red3d font-blod">PUT|PATCH</span> <span class="text-red3d font-blod">Method</span> is used to <span class="text-red3d font-blod">"Update"</span> a data using <span class="text-red3d font-blod">API</span>.</li>
+                    <li class="text-gray3720 list-disc list-inside"><span class="text-red3d font-blod">DELETE</span>: The <span class="text-red3d font-blod">HTTP</span> <span class="text-red3d font-blod">DELETE</span> <span class="text-red3d font-blod">Method</span> is used to <span class="text-red3d font-blod">"Delete"</span> a data using <span class="text-red3d font-blod">API</span>.</li>
+                </ul>
+            </div>
+          </article>
+    </main>
+</body>
+</html>

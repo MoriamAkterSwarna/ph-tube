@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH-Tube</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* applying-font */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+    
+    <!-- Favicon --> 
+    <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon">
+
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    red3d: '#FF1F3D',
+                    dark17: '#171717',
+                    dark25: '#252525',
+                    gray3770: 'rgba(37, 37, 37, 0.70)',
+                    gray2370: 'rgba(23, 23, 23, 0.70)',
+                    gray2320: 'rgba(23, 23, 23, 0.20)',
+                    gray3715: 'rgba(37, 37, 37, 0.15)',
+                    gray3720: 'rgba(37, 37, 37, 0.20)'
+                }
+            }
+        }
+    }
+    </script>
+    
+</head>
+
+<body class="max-w-[1320px] mx-auto">
+    <header class="mt-12 mb-8 px-5">
+        <nav class="flex flex-col md:flex-row justify-between items-center gap-6">
+            <img class="inline-block h-8 hover:scale-110 duration-300" src="./images/logo.svg" alt="ph-tube-logo">
+            <button id="sort-by-view-button" class="text-lg font-medium rounded-[4px] px-5 py-2 duration-300 hover:-translate-y-1 hover:shadow-md active:translate-y-[-2px] active:shadow-sm text-dark25 bg-gray3720" onclick="sortByViewHandler()">Sort by view</button>
+            <a href="./blog.html" target="_blank"><button class="text-white text-lg font-semibold bg-red3d rounded-[4px] px-5 py-2 hover:bg-dark25 duration-300 hover:-translate-x-1 hover:shadow-md active:translate-x-[-2px] active:shadow-sm">Blog</button></a>
+        </nav>
+    </header>
+
+    <hr class="bg-gray2320">
+
+    <main>
+        <!-- category buttons -->
+        <section id="category-buttons-container" class="flex justify-center items-center gap-6 mt-8 flex-wrap"></section>
+
+        <!-- category items container -->
+        <section id="category-items-container" class="mb-28"></section>
+
+       
+        <!-- modal End -->
+        </section>
+    </main>
+
+    <script src="./index.js"></script>
+</body>
+</html>
