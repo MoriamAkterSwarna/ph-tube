@@ -20,6 +20,7 @@
     <!-- Favicon --> 
     <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon">
 
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
     <!-- tailwind css -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -46,26 +47,60 @@
 <body class="max-w-[1320px] mx-auto">
     <header class="mt-12 mb-8 px-5">
         <nav class="flex flex-col md:flex-row justify-between items-center gap-6">
-            <img class="inline-block h-8 hover:scale-110 duration-300" src="./images/logo.svg" alt="ph-tube-logo">
-            <button id="sort-by-view-button" class="text-lg font-medium rounded-[4px] px-5 py-2 duration-300 hover:-translate-y-1 hover:shadow-md active:translate-y-[-2px] active:shadow-sm text-dark25 bg-gray3720" onclick="sortByViewHandler()">Sort by view</button>
-            <a href="./blog.html" target="_blank"><button class="text-white text-lg font-semibold bg-red3d rounded-[4px] px-5 py-2 hover:bg-dark25 duration-300 hover:-translate-x-1 hover:shadow-md active:translate-x-[-2px] active:shadow-sm">Blog</button></a>
+            <img class="inline-block h-8 " src="./images/logo.svg" alt="ph-tube-logo">
+
+            <!-- For Searching  -->
+            <section class="p-4 m-4 flex">
+
+            <input id="search-field" type="text" placeholder="search" class="input input-bordered rounded-lg mr-2 w-full max-w-xs" />
+            <button onclick="searchHandler()" class="text-lg font-medium rounded-[4px] px-5 py-[5px] text-3770 bg-gray3715 hover:bg-red3d">Search</button>
+
+        </section>
+            <button id="sort-by-view-button" class="text-white text-lg font-semibold bg-red3d rounded-[4px] px-5 py-2" onclick="sortByViewHandler()">Sort by view</button>
+            
         </nav>
     </header>
 
     <hr class="bg-gray2320">
 
     <main>
+        <!-- Toggle spinner -->
+         <div id="loading-spinner" class="text-center my-40 hidden">
+                <span class="loading loading-spinner text-primary loading-lg"></span>
+            </div>
+
+
         <!-- category buttons -->
         <section id="category-buttons-container" class="flex justify-center items-center gap-6 mt-8 flex-wrap"></section>
 
         <!-- category items container -->
         <section id="category-items-container" class="mb-28"></section>
 
-       
-        <!-- modal End -->
+
+        
         </section>
+
+        <!-- Modal Start -->
+         <!-- Show Details modal -->
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+            <form method="dialog" class="modal-box w-11/12 max-w-5xl">
+                
+                <div id="detail-container" >
+
+                </div>
+                <div class="modal-action">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                </div>
+            </form>
+        </dialog>
+        <!-- Modal End -->
+
+
     </main>
 
     <script src="./index.js"></script>
+    <script src="./modal.js"></script>
 </body>
 </html>
