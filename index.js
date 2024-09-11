@@ -227,8 +227,6 @@ const sortByViewHandler = () => {
 
 const main = async () => {
   const categoryToBeSelected = await categoryHandler();
-
-  await renderCategoryItems(categoryToBeSelected);
   await searchHandler();
   await selectCategory(categoryToBeSelected);
 };
