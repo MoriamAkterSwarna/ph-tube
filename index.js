@@ -4,7 +4,9 @@ let isLastRenderedCategoryItemsSorted
 let categoryItems;
 
 let searchText;
-const searchHandler = async () => {
+const searchHandler = async () =>
+{
+  toggleLoadingSpinner(true);
   const searchField = document.getElementById("search-field");
   searchText = searchField.value;
   console.log(searchText);
@@ -112,7 +114,9 @@ const renderCategoryItems = async (categoryId, searchItems) => {
   );
   categoryItemsContainer.innerHTML = "";
 
-  if (categoryItems?.length === 0) {
+  if ( categoryItems?.length === 0 )
+  {
+    toggleLoadingSpinner(false);
     disableSortByViewButton();
     categoryItemsContainer.innerHTML = `
             <div class="text-center mt-[50px] lg:mt-[150px]">
@@ -183,7 +187,7 @@ const renderCategoryItems = async (categoryId, searchItems) => {
               ""
             )}</div>
         `;
-
+        toggleLoadingSpinner(false);
     isLastRenderedCategoryItemsSorted = sortByView;
   }
 };
